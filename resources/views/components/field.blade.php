@@ -1,0 +1,21 @@
+@props(['label', 'name', 'type' => 'text', 'value' => null, 'required' => false, 'hint' => null])
+<div {{ $attributes->only('class') }}>
+    <label for="{{ $name }}" class="mb-1.5 block text-xs font-bold uppercase tracking-wide text-cocoa-700">
+        {{ $label }} @if($required)<span class="text-blush-500">*</span>@endif
+    </label>
+    <input
+        type="{{ $type }}"
+        id="{{ $name }}"
+        name="{{ $name }}"
+        value="{{ old($name, $value) }}"
+        {{ $required ? 'required' : '' }}
+        {{ $attributes->except('class') }}
+        class="w-full rounded-md border px-3 py-2 text-sm text-cocoa-900 outline-none focus:border-cocoa-900 {{ $errors->has($name) ? 'border-red-400' : 'border-cocoa-900/20' }}"
+    >
+    @if ($hint)
+        <p class="mt-1 text-xs text-cocoa-500">{{ $hint }}</p>
+    @endif
+    @error($name)
+        <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+    @enderror
+</div>

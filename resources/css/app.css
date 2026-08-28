@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+/*
+  Admin panel design tokens. This palette intentionally mirrors the DESERV'D
+  storefront (see the React frontend's src/index.css) so the admin panel feels
+  like part of the same brand rather than a generic scaffold-generated UI —
+  while remaining entirely separate Blade/Tailwind code, per the brief.
+*/
+@theme {
+  --color-cocoa-950: #1b0e05;
+  --color-cocoa-900: #301d0e;
+  --color-cocoa-800: #422b19;
+  --color-cocoa-700: #573a25;
+  --color-cocoa-600: #765237;
+  --color-cocoa-500: #9a7454;
+  --color-cocoa-400: #b99a7e;
+  --color-cocoa-300: #d0b79f;
+  --color-cocoa-200: #e5d5c4;
+  --color-cocoa-100: #f0e5d9;
+  --color-cocoa-50: #f8f1ea;
+
+  --color-cream-50: #fdfaf7;
+  --color-cream-100: #faf4ef;
+  --color-cream-200: #f5ece7;
+  --color-cream-300: #efe1d6;
+
+  --color-blush-50: #fdf3f5;
+  --color-blush-100: #fae4e9;
+  --color-blush-200: #f4c7d1;
+  --color-blush-300: #eb9dae;
+  --color-blush-400: #e2758c;
+  --color-blush-500: #d9556d;
+  --color-blush-600: #c34459;
+  --color-blush-700: #a3364a;
+
+  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream-200);
+    color: var(--color-cocoa-900);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+  }
+}
