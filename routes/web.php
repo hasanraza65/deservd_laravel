@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 | the React app.
 */
 
+/*
+
 Route::redirect('/', '/admin');
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -65,4 +67,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::put('settings/shipping-methods/{shippingMethod}', [SettingController::class, 'updateShippingMethod'])->name('settings.shipping-methods.update');
         Route::put('settings/box-options/{boxOption}', [SettingController::class, 'updateBoxOption'])->name('settings.box-options.update');
     });
-});
+}); */
